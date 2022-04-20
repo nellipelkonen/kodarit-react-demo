@@ -4,6 +4,7 @@ import { InputTutorial } from './input';
 
 
 function App() {
+
   return (
     <div>
         <div>

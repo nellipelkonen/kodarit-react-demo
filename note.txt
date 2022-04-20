@@ -1,0 +1,3 @@
+- install node (if not already installed)
+- downloading react and creating a new project
+- launching your react project 
