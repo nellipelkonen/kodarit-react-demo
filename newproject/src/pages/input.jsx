@@ -27,7 +27,7 @@ export const InputTutorial = () => {
                 onChange={e => setInputValue(e.target.value)}
                 required
             />
-            <input type="submit"/>
+            <input type="submit" value='Add'/>
         {
             content.map((content, index) => (
             <div>
