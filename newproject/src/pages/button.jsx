@@ -8,10 +8,20 @@ export const Button = () => {
     setCount(count + 1);
   }
 
+  function resetCount() {
+    setCount(0);
+  }
+
     return (
-      <button onClick={handleClick}>
-      Clicked {count} times
-      </button>
+      <div>
+        <button onClick={handleClick} className='btn'>
+        Clicked {count} times
+        </button>
+
+        <button onClick={resetCount} className='btn'>
+        Clear count
+        </button>
+      </div>
     );
   }
 

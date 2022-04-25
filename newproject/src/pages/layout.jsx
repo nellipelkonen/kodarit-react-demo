@@ -3,19 +3,21 @@ import { Outlet, Link } from "react-router-dom";
 export const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
+    <div>
+      <nav className="nav">
+        <ul className="navlist">
+          <li className="navlink">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="navlink">
             <Link to="/button">Button</Link>
           </li>
-          <li>
+          <li className="navlink">
             <Link to="/input">Input</Link>
           </li>
         </ul>
       </nav>
+    </div>
 
       <Outlet />
     </>

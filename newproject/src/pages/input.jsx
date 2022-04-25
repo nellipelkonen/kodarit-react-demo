@@ -13,28 +13,30 @@ export const InputTutorial = () => {
       };
 
     return (
-        <form className='inputcontent' onSubmit={(event) => {
-            event.preventDefault()
-            const temp = [inputValue, ...content];
-            setContent(temp);
-            setInputValue('');
-        }}>
-            <h2>Input tutorial</h2>
-            <input 
-                type='text'
-                placeholder='Type here...'
-                value={inputValue}
-                onChange={e => setInputValue(e.target.value)}
-                required
-            />
-            <input type="submit" value='Add'/>
-        {
-            content.map((content, index) => (
-            <div>
-            <p key={index}>{content}</p>
-            <button onClick={() => removeHandler(index)} type="button">Delete</button>
-            </div>
-            )
-        )}
-        </form>
+        <div className='inputcontent'>
+            <form onSubmit={(event) => {
+                event.preventDefault()
+                const temp = [inputValue, ...content];
+                setContent(temp);
+                setInputValue('');
+            }}>
+                <h2>Input tutorial</h2>
+                <input 
+                    type='text'
+                    placeholder='Type here...'
+                    value={inputValue}
+                    onChange={e => setInputValue(e.target.value)}
+                    required
+                />
+                <input type="submit" value='Add' className='btn'/>
+            {
+                content.map((content, index) => (
+                <div className='inputmap'>
+                <p key={index}>{content}</p>
+                <button onClick={() => removeHandler(index)} type="button" className='btn'>Delete</button>
+                </div>
+                )
+            )}
+            </form>
+        </div>
 )}

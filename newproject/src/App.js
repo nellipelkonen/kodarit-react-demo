@@ -13,6 +13,7 @@ function App() {
   return (
 
     <BrowserRouter>
+    <div className='maincontent'>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -25,6 +26,7 @@ function App() {
           } />
         </Route>
       </Routes>
+    </div>
     </BrowserRouter>
   );
 }
