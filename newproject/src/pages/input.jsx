@@ -32,7 +32,7 @@ export const InputTutorial = () => {
             {
                 content.map((content, index) => (
                 <div className='inputmap'>
-                <p key={index}>{content}</p>
+                <h3 key={index}>{content}</h3>
                 <button onClick={() => removeHandler(index)} type="button" className='btn'>Delete</button>
                 </div>
                 )

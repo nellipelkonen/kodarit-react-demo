@@ -18,11 +18,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='input' element={<InputTutorial />} />
-          <Route path='button' element={
-            <div>
-              <Button /><br></br>
-              <Button />
-            </div>  
+          <Route path='button' element={<Button />
           } />
         </Route>
       </Routes>

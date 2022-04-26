@@ -1,7 +1,7 @@
 import React from 'react';
 const { useState } = React;
 
-export const Button = () => {
+export const Button = (handleClick, resetCount) => {
   const [count, setCount] = useState(0);
 
   function handleClick() {
@@ -14,12 +14,15 @@ export const Button = () => {
 
     return (
       <div>
-        <button onClick={handleClick} className='btn'>
-        Clicked {count} times
+        <h1>Counters that update together</h1>
+        <button className='btn' onClick={() => handleClick()}>
+          Clicked {count} times
         </button>
-
-        <button onClick={resetCount} className='btn'>
-        Clear count
+        <button className='btn' onClick={() => handleClick()}>
+          Clicked {count} times
+        </button>
+        <button className='btn' onClick={() => resetCount()}>
+          Clear count
         </button>
       </div>
     );
