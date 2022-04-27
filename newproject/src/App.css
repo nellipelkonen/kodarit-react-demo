@@ -56,8 +56,9 @@ input[type=submit] {
   margin-left: 20px;
 }
 
-.input map {
+.inputmap {
   width: auto;
+  border-bottom: 1px solid black;
 }
 
 .mapheader{
@@ -128,7 +129,7 @@ input[type=submit] {
   color: #fff;
   border: none;
   padding: 7px 17px;
-  margin: 5px;
+  margin-top: 15px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
