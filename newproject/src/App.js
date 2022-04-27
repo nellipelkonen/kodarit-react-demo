@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Layout }from "./pages/layout";
-import { Home } from "./pages/home";
-import { Button } from './pages/button';
-import { InputTutorial } from './pages/input';
+import { Layout }from "./pages/Layout";
+import { Home } from "./pages/Home";
+import { Button } from './pages/Button';
+import { InputTutorial } from './pages/Input';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,13 +13,12 @@ function App() {
   return (
 
     <BrowserRouter>
-    <div className='maincontent'>
+    <div className='asd'>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='input' element={<InputTutorial />} />
-          <Route path='button' element={<Button />
-          } />
+          <Route path='button' element={<Button />} />
         </Route>
       </Routes>
     </div>

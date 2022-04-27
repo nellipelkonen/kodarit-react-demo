@@ -10,7 +10,7 @@ export const Layout = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="navlink">
-            <Link to="/button">Button</Link>
+            <Link to="/button">Buttons</Link>
           </li>
           <li className="navlink">
             <Link to="/input">Input</Link>

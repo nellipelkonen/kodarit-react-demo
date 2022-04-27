@@ -2,6 +2,13 @@ import React from 'react';
 
 export const Home = () => {
     return (
-      <h1>Home</h1>
+        <div className='maincontent'>
+            <h1>Home</h1>
+            <span>A simple tutorial for react components.</span>
+
+            <ul>
+                
+            </ul>
+        </div>
     );
   }

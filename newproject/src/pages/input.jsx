@@ -13,27 +13,39 @@ export const InputTutorial = () => {
       };
 
     return (
-        <div className='inputcontent'>
+        <div className='maincontent'>
             <form onSubmit={(event) => {
                 event.preventDefault()
                 const temp = [inputValue, ...content];
                 setContent(temp);
                 setInputValue('');
             }}>
-                <h2>Input tutorial</h2>
+                <div className='inputheader'>
+                <h2 >Input tutorial</h2>
+                <span>Component that renders data submitted in the form and deletes individual rows.</span>
+                </div>
                 <input 
                     type='text'
+                    className='inputfield'
                     placeholder='Type here...'
                     value={inputValue}
                     onChange={e => setInputValue(e.target.value)}
                     required
                 />
-                <input type="submit" value='Add' className='btn'/>
+                
+                <input type="submit" value='Add' className='btn-add'/>
             {
                 content.map((content, index) => (
                 <div className='inputmap'>
-                <h3 key={index}>{content}</h3>
-                <button onClick={() => removeHandler(index)} type="button" className='btn'>Delete</button>
+                    <ul>
+                        <li className='mapitem'>
+                            <div className='jokulista'>
+                                <h4 className='mapheader' key={index}>{content}</h4>
+                                <button onClick={() => removeHandler(index)} type="button" className='btn-delete'>X</button>
+                            </div>
+                        </li>
+                        
+                    </ul>
                 </div>
                 )
             )}
