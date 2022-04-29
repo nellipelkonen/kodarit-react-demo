@@ -95,11 +95,14 @@ input[type=submit] {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .navlink {
-  float: left;
-  margin-left: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .navlink a {
@@ -108,6 +111,10 @@ input[type=submit] {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.homelink {
+  margin-left: 25px;
 }
 
 .navlink a:hover {
@@ -120,6 +127,10 @@ input[type=submit] {
 
 .inputspan {
   padding-bottom: 200px;
+}
+
+.homelist {
+  margin-left: 20px;
 }
 
 .btn-delete {

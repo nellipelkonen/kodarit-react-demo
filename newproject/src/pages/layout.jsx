@@ -7,13 +7,16 @@ export const Layout = () => {
       <nav className="nav">
         <ul className="navlist">
           <li className="navlink">
-            <Link to="/">Home</Link>
+            <Link className="homelink" to="/">Home🏠 </Link>
           </li>
           <li className="navlink">
             <Link to="/button">Buttons</Link>
           </li>
           <li className="navlink">
             <Link to="/input">Input</Link>
+          </li>
+          <li className="navlink">
+            <Link to="/timer">Timer</Link>
           </li>
         </ul>
       </nav>
