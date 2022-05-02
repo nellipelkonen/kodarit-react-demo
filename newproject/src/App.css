@@ -113,10 +113,6 @@ input[type=submit] {
   text-decoration: none;
 }
 
-.homelink {
-  margin-left: 25px;
-}
-
 .navlink a:hover {
   background-color: #111;
 }
@@ -131,6 +127,10 @@ input[type=submit] {
 
 .homelist {
   margin-left: 20px;
+}
+
+.itemparent {
+  border: 1px solid black;
 }
 
 .btn-delete {
