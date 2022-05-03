@@ -7,16 +7,11 @@ export const Timer = () =>{
 
   useEffect(() => {
     setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-  });
-
-  useEffect(() => {
-    setTimeout(() => {
       setCount2(count2 + 1);
     }, 1000);
 
     const interval = setInterval(() => {
+      setCount(counter => counter + 1);
     }, 1000);
 
     return () => {

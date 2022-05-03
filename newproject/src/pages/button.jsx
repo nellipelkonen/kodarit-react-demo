@@ -21,19 +21,21 @@ export const Button = (handleClick, resetCount) => {
 
     return (
       <div className='maincontent'>
-        <h2>Buttons</h2>
-        <span>Counters that update separately but reset together</span>
-          <div className='btn-group'>
-            <button className='btn-count' onClick={() => handleClick()}>
-              Clicked {count} times
-            </button><br></br>
-            <button className='btn-count' onClick={() => handleClick2()}>
-              Clicked {count2} times
-            </button><br></br>
-          </div>
-            <button className='btn-clear' onClick={() => resetCount()}>
-              Clear count
-            </button>          
+        <div className='buttonscontent'>
+          <h2>Buttons</h2>
+          <span>Counters that update separately but reset together</span>
+        </div>
+        <div className='btn-group'>
+          <button className='btn-count' onClick={() => handleClick()}>
+            Clicked {count} times
+          </button><br></br>
+          <button className='btn-count' onClick={() => handleClick2()}>
+            Clicked {count2} times
+          </button><br></br>
+        </div>
+          <button className='btn-clear' onClick={() => resetCount()}>
+            Clear count
+          </button>          
       </div>
     );
   }

@@ -6,8 +6,6 @@
   padding: 0;
 }
 
-
-
 body {
   display: flex;
   justify-content: center;
@@ -65,16 +63,17 @@ input[type=submit] {
   padding-top: 12px;
 }
 
-
 .jokulista{
   display: flex;
   justify-content: space-between
 }
 
 .mapitem {
+  margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 10px;
-  justify-content: space-between;
+  list-style-type: '✦';
+  padding-inline-start: 1ch;
 }
 
 .maincontent{
@@ -91,25 +90,18 @@ input[type=submit] {
 
 .navlist {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: #333;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-.navlink {
-  margin-left: 10px;
-  margin-right: 10px;
+  justify-content: space-evenly;
 }
 
 .navlink a {
+  padding: 15px 10px 15px 10px;
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -129,8 +121,8 @@ input[type=submit] {
   margin-left: 20px;
 }
 
-.itemparent {
-  border: 1px solid black;
+.mapheader {
+  margin-top: 5px;
 }
 
 .btn-delete {
@@ -139,8 +131,8 @@ input[type=submit] {
   background: rgb(223, 24, 24);
   color: #fff;
   border: none;
-  padding: 7px 17px;
-  margin-top: 15px;
+  padding: 7px 15px;
+  margin-top: 5px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
@@ -196,8 +188,24 @@ input[type=submit] {
   font-family: inherit;
 }
 
-
 .btn-group {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.buttonscontent {
+  margin-left: 5px;
+}
+
+.itemparent{
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 5px 15px;
+  margin-bottom: 20px;
+}
+
+.itemimg {
+  width: 100%;
 }

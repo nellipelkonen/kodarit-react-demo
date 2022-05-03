@@ -41,7 +41,7 @@ export const InputTutorial = () => {
                         <li className='mapitem'>
                             <div className='jokulista'>
                                 <h4 className='mapheader' key={index}>{content}</h4>
-                                <button onClick={() => removeHandler(index)} type="button" className='btn-delete'>X</button>
+                                <button onClick={() => removeHandler(index)} type="button" className='btn-delete'>✖</button>
                             </div>
                         </li>
                         
