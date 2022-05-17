@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Button } from './pages/Button';
 import { Timer } from './pages/Timer';
 import { Items } from './pages/Items';
+import { TicTacToe } from './pages/TicTacToe';
 import { InputTutorial } from './pages/Input';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -15,14 +16,15 @@ function App() {
   return (
 
     <BrowserRouter>
-    <div className='asd'>
+    <div>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='input' element={<InputTutorial />} />
-          <Route path='button' element={<Button />} />
-          <Route path='timer' element={<Timer />} />
-          <Route path='items' element={<Items />} />
+          <Route path='Input' element={<InputTutorial />} />
+          <Route path='Button' element={<Button />} />
+          <Route path='Timer' element={<Timer />} />
+          <Route path='Items' element={<Items />} />
+          <Route path='TicTacToe' element={<TicTacToe />} />
         </Route>
       </Routes>
     </div>

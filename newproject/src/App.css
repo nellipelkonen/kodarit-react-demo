@@ -210,3 +210,52 @@ input[type=submit] {
 .itemimg {
   width: 100%;
 }
+
+
+.game {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  background-color: #001544;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.rowjustify {
+  justify-content: center;
+}
+
+.square {
+  min-width: 100px;
+  min-height: 100px;
+  font-size: 64px;
+  text-align: center;
+  color: #1CDBF5;
+  font-weight: bolder;
+  padding: 30px;
+}
+
+.b-bottom-right {
+  border-right: 15px solid #1CDBF5;
+  border-bottom: 15px solid #1CDBF5;
+}
+
+.b-bottom {
+  border-bottom: 15px solid #1CDBF5;
+}
+
+.b-right {
+  border-right: 15px solid #1CDBF5;
+}
+
+.btn-clear {
+  width: max-content;
+  margin: 40px auto 10px auto;
+}
