@@ -12,6 +12,10 @@ export const TicTacToe = () => {
         strings [index] = isXChance ? 'X' : 'O';
         setGameState(strings);
         setIsXChance(!isXChance);
+
+        if (gameState[index] != ''){
+            return
+        }
     }
 
     useEffect(() => {
@@ -46,7 +50,7 @@ export const TicTacToe = () => {
     return (
         <div className='maincontent'>
             <div className='game'>
-                <p>Tic-Tac-Toe</p>
+                <p className='gametitle'>Tic-Tac-Toe</p>
                 <div className='row rowcenter'>
                     <Square className='b-bottom-right' state={gameState[0]} onClick = { () => onSquareClick(0)}/>
                     <Square className='b-bottom-right' state={gameState[1]} onClick = { () => onSquareClick(1)}/>
@@ -62,7 +66,7 @@ export const TicTacToe = () => {
                     <Square className='b-right' state={gameState[7]} onClick = { () => onSquareClick(7)}/>
                     <Square state={gameState[8]} onClick = { () => onSquareClick(8)}/>
                 </div>
-                <button className='btn-clear' onClick={()=>setGameState(intialState)}>Clear game</button>
+                <button className='btn-clear btn-clear-game' onClick={()=>setGameState(intialState)}>Clear game</button>
             </div>
         </div>
     );

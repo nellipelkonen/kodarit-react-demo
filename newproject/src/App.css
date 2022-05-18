@@ -214,13 +214,19 @@ input[type=submit] {
 
 .game {
   display: flex;
-  min-height: 100vh;
+  width: 100%;
   flex-direction: column;
   text-align: center;
-  background-color: #001544;
-  color: white;
+  background-color: rgb(190, 200, 200);
+  color: black;
   justify-content: center;
   align-items: center;
+}
+
+.gametitle {
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 20px;
 }
 
 .row {
@@ -233,29 +239,29 @@ input[type=submit] {
 }
 
 .square {
-  min-width: 100px;
-  min-height: 100px;
+  width: 100px;
+  height: 100px;
   font-size: 64px;
   text-align: center;
-  color: #1CDBF5;
+  color: #000000;
   font-weight: bolder;
   padding: 30px;
+  font-size: 30px;
 }
 
 .b-bottom-right {
-  border-right: 15px solid #1CDBF5;
-  border-bottom: 15px solid #1CDBF5;
+  border-right: 7px solid black;
+  border-bottom: 7px solid black;
 }
 
 .b-bottom {
-  border-bottom: 15px solid #1CDBF5;
+  border-bottom: 7px solid black;
 }
 
 .b-right {
-  border-right: 15px solid #1CDBF5;
+  border-right: 7px solid black;
 }
 
-.btn-clear {
-  width: max-content;
-  margin: 40px auto 10px auto;
+.btn-clear-game {
+  margin-top: 25px;
 }
