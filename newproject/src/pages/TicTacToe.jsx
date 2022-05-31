@@ -5,24 +5,31 @@ const intialState=['', '', '', '', '', '', '', '', '',]
 
 export const TicTacToe = () => {
     const [gameState, setGameState] = useState(intialState);
-    const [isXChance, setIsXChance] = useState(false);
+    const [isXChance, setIsXChance] = useState(true);
+    const [status, setStatus] = useState('');
     
     const onSquareClick = (index) =>{
         let strings = Array.from(gameState);
+
+        if (status.includes("Winner")) {
+            return
+        }
+
+        if (strings[index] !== '') {
+            return;
+        }
+
         strings [index] = isXChance ? 'X' : 'O';
         setGameState(strings);
         setIsXChance(!isXChance);
-
-        if (gameState[index] != ''){
-            return
-        }
     }
 
     useEffect(() => {
         const winner = checkWinner();
         if(winner){
-            alert(`${winner} won the game!`)
-            setGameState(intialState)
+            setStatus(`Winner: ${winner}`)
+        } else {
+            setStatus(`Next player: ${isXChance ? 'X' : 'O'}`)
         }
     }, [gameState])
 
@@ -66,7 +73,26 @@ export const TicTacToe = () => {
                     <Square className='b-right' state={gameState[7]} onClick = { () => onSquareClick(7)}/>
                     <Square state={gameState[8]} onClick = { () => onSquareClick(8)}/>
                 </div>
-                <button className='btn-clear btn-clear-game' onClick={()=>setGameState(intialState)}>Clear game</button>
+                <div className='gameinfo'>
+                    {!status.includes("Winner") && (
+                        <p className='status'>{status}</p>    
+                    )}
+                    {status.includes("Winner") && (
+                        <p className='status' style={{color: "green"}} >{status}</p>    
+                    )}                     
+                    {!status.includes("Winner") && (
+                        <button className='btn-clear btn-clear-game' onClick={()=> {
+                            setGameState(intialState);
+                            setIsXChance(true);
+                        }}>Clear game</button>    
+                    )}
+                    {status.includes("Winner") && (
+                        <button className='btn-clear btn-count' onClick={()=> {
+                            setGameState(intialState);
+                            setIsXChance(true);
+                        }}>Play again</button>
+                    )}
+                </div>
             </div>
         </div>
     );
