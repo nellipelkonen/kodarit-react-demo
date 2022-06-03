@@ -28,6 +28,8 @@ export const TicTacToe = () => {
         const winner = checkWinner();
         if(winner){
             setStatus(`Winner: ${winner}`)
+        } else if (!gameState.includes('')){
+            setStatus(`It's a draw`)
         } else {
             setStatus(`Next player: ${isXChance ? 'X' : 'O'}`)
         }
@@ -80,13 +82,19 @@ export const TicTacToe = () => {
                     {status.includes("Winner") && (
                         <p className='status' style={{color: "green"}} >{status}</p>    
                     )}                     
-                    {!status.includes("Winner") && (
+                    {status.includes("Next player") && (
                         <button className='btn-clear btn-clear-game' onClick={()=> {
                             setGameState(intialState);
                             setIsXChance(true);
                         }}>Clear game</button>    
                     )}
                     {status.includes("Winner") && (
+                        <button className='btn-clear btn-count' onClick={()=> {
+                            setGameState(intialState);
+                            setIsXChance(true);
+                        }}>Play again</button>
+                    )}
+                    {status.includes("draw") && (
                         <button className='btn-clear btn-count' onClick={()=> {
                             setGameState(intialState);
                             setIsXChance(true);
