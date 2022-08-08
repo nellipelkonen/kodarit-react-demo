@@ -95,10 +95,10 @@ export const TicTacToe = () => {
                         }}>Play again</button>
                     )}
                     {status.includes("draw") && (
-                        <button className='btn-clear btn-count' onClick={()=> {
+                        <button className='btn-clear btn-draw' onClick={()=> {
                             setGameState(intialState);
                             setIsXChance(true);
-                        }}>Play again</button>
+                        }}>Clear game</button>
                     )}
                 </div>
             </div>

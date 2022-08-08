@@ -10,19 +10,16 @@ export const Layout = () => {
             <Link to="/">Home🏠 </Link>
           </li>
           <li className="navlink">
-            <Link to="/Button">Buttons🖲️</Link>
+            <Link to="/button">Buttons🔘</Link>
           </li>
           <li className="navlink">
-            <Link to="/Input">Input📝</Link>
+            <Link to="/input">Input📝</Link>
           </li>
           <li className="navlink">
-            <Link to="/Timer">Timer⌛</Link>
+            <Link to="/timer">Timer⌛</Link>
           </li>
           <li className="navlink">
-            <Link to="/Items">Items📄</Link>
-          </li>
-          <li className="navlink">
-            <Link to="/TicTacToe">❌/⭕</Link>
+            <Link to="/items">Items📄</Link>
           </li>
         </ul>
       </nav>
