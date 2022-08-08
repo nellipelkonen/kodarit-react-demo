@@ -21,6 +21,9 @@ export const Layout = () => {
           <li className="navlink">
             <Link to="/items">Items📄</Link>
           </li>
+          <li className="navlink">
+            <Link to="/tictactoe">❌/⭕</Link>
+          </li>
         </ul>
       </nav>
     </div>
