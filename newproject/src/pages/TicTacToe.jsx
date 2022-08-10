@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import { ScoreBoard } from './ScoreBoard';
 import Square from './Square';
 const intialState=['', '', '', '', '', '', '', '', '',]
 
@@ -7,6 +8,7 @@ export const TicTacToe = () => {
     const [gameState, setGameState] = useState(intialState);
     const [isXChance, setIsXChance] = useState(true);
     const [status, setStatus] = useState('');
+    const [scores, setScores] = useState({ xScore: 0, oScore: 0})
     
     const onSquareClick = (index) =>{
         let strings = Array.from(gameState);
@@ -31,8 +33,20 @@ export const TicTacToe = () => {
         } else if (!gameState.includes('')){
             setStatus(`It's a draw`)
         } else {
-            setStatus(`Next player: ${isXChance ? 'X' : 'O'}`)
+            setStatus(`${isXChance ? 'X' : 'O'}'s turn`)
         }
+
+        if(winner === "O"){
+            let {oScore} = scores;
+            oScore += 1
+            setScores({...scores, oScore})
+        } else if(winner === "X") {
+            let {xScore} = scores;
+            xScore += 1
+            setScores({...scores, xScore})
+        }
+        console.log(scores)
+
     }, [gameState])
 
     const checkWinner = () => {
@@ -60,6 +74,7 @@ export const TicTacToe = () => {
         <div className='maincontent'>
             <div className='game'>
                 <p className='gametitle'>Tic-Tac-Toe</p>
+                <ScoreBoard scores={scores} isXChance={isXChance}/>
                 <div className='row rowcenter'>
                     <Square className='b-bottom-right' state={gameState[0]} onClick = { () => onSquareClick(0)}/>
                     <Square className='b-bottom-right' state={gameState[1]} onClick = { () => onSquareClick(1)}/>
@@ -82,7 +97,7 @@ export const TicTacToe = () => {
                     {status.includes("Winner") && (
                         <p className='status' style={{color: "green"}} >{status}</p>    
                     )}                     
-                    {status.includes("Next player") && (
+                    {status.includes("turn") && (
                         <button className='btn-clear btn-clear-game' onClick={()=> {
                             setGameState(intialState);
                             setIsXChance(true);
