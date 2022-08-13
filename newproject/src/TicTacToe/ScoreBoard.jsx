@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ScoreBoard = (scores, isXChance) => {
+export const ScoreBoard = ({ scores, isXChance}) => {
     const {xScore, oScore} = scores;
     
     return(

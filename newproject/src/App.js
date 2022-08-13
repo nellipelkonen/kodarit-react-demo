@@ -5,7 +5,7 @@ import { Home } from "./pages/Home";
 import { Button } from './pages/Button';
 import { Timer } from './pages/Timer';
 import { Items } from './pages/Items';
-import { TicTacToe } from './pages/TicTacToe';
+import { TicTacToe } from './TicTacToe/TicTacToe';
 import { InputTutorial } from './pages/Input';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
