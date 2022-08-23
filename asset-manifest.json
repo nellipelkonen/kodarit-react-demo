@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kodarit-react-demo/static/css/main.ceaff2d6.css",
+    "main.js": "/kodarit-react-demo/static/js/main.48fa5eca.js",
+    "static/js/787.cdfe00ef.chunk.js": "/kodarit-react-demo/static/js/787.cdfe00ef.chunk.js",
+    "index.html": "/kodarit-react-demo/index.html",
+    "main.ceaff2d6.css.map": "/kodarit-react-demo/static/css/main.ceaff2d6.css.map",
+    "main.48fa5eca.js.map": "/kodarit-react-demo/static/js/main.48fa5eca.js.map",
+    "787.cdfe00ef.chunk.js.map": "/kodarit-react-demo/static/js/787.cdfe00ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ceaff2d6.css",
+    "static/js/main.48fa5eca.js"
+  ]
+}
